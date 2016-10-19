@@ -1,0 +1,253 @@
+body
+{
+    overflow-x: hidden;
+    overflow-y: hidden !important;
+
+    background: url('../imgs/grey2.png') repeat;
+    background-color: transparent;
+}
+
+
+.md-fab:hover
+{
+    transition: .5s;
+
+    opacity: 1 !important;
+}
+
+.row.top-row
+{
+    border-bottom: solid 2px black;
+    background: url('../imgs/grey2.png') repeat;
+    box-shadow: -3px -3px 1px black;
+}
+
+.shopping-card
+{
+    position: absolute;
+    z-index: 20;
+    top: 1vh;
+    right: -4vw;
+
+    padding-right: 10px;
+    padding-bottom: 15px;
+    padding-left: 10px;
+
+    text-align: center;
+
+    border: solid 2px rgb(16, 0, 48);
+    border-radius: 30px;
+    background: url('../imgs/orangeTile.png') repeat;
+}
+
+.cartInt
+{
+    font-size: 1em;
+
+    position: relative;
+    left: -1em;
+
+    display: inline-flex;
+
+    padding: .3em;
+    padding-right: .4em;
+    padding-left: .4em;
+
+    color: white;
+    border: solid 1px black;
+    border-radius: 100px;
+    background-color: rgb(255, 122, 0);
+    text-shadow: 1px 1px 1px black;
+}
+#sideNavController
+{
+    position: fixed;
+    top: 0;
+
+    width: 10vw;
+    height: 10vw;
+    padding-left: 20px;
+}
+
+.sideBar{
+  height: 51px;
+  display: inline-flex;
+}
+
+.sideBar .md-fab{
+  width: 50px;
+  height: 50px;
+}
+
+.sideLabel
+{
+    margin-bottom: 0;
+    padding-top: 10px;
+    padding-bottom: 0;
+    padding-left: 20px;
+}
+
+.product-row
+{
+    margin-right: auto;
+
+    align-items: center;
+}
+
+.cart-logo-x
+{
+    position: relative;
+    top: -2.5em;
+    left: -2.9em;
+
+    display: inline-flex;
+
+    text-align: center;
+}
+
+.cart-logo
+{
+    position: relative;
+    z-index: 1;
+    right: 10px;
+
+    display: inline-block;
+
+    margin-top: 10px;
+    margin-right: 5px;
+    padding-top: 6px;
+    padding-right: 6px;
+    padding-left: 6px;
+
+    border: solid 2px rgba(175, 102, 27, .5);
+    border-radius: 100px;
+    background-color: rgba(221, 153, 83, .5);
+}
+
+.smImg
+{
+    display: inline-flex;
+
+    width: 3vw;
+    padding-bottom: 10px;
+}
+
+#search
+{   min-width: 200px;
+    width: 20vw;
+
+    color: black;
+    border: solid  1px rgb(0, 0, 0);
+    background-color: white;
+}
+
+#login
+{
+    display: inline-flex;
+    min-width: 100px;
+    width: 8vw;
+    margin-top: 15px;
+
+    color: black;
+    border: solid  1px rgb(0, 0, 0);
+    background-color: white;
+}
+
+#password
+{
+    display: inline-flex;
+     min-width: 100px;
+    width: 8vw;
+    margin-top: 15px;
+
+    color: black;
+    border: solid  1px rgb(0, 0, 0);
+    background-color: white;
+}
+
+
+
+.container-fluid
+{
+    overflow-x: hidden;
+
+    padding: 0;
+}
+
+.bill
+{
+    font-size: 1.2em;
+
+    color: rgb(2, 40, 5);
+    background-color: rgb(217, 165, 117);
+    box-shadow: 0 2px 2px black;
+    text-shadow: 1px 1px 1px black;
+}
+
+.size-slider
+{
+    width: 10vw;
+    padding-top: 2px;
+    padding-left: 5px;
+}
+
+.row
+{
+    background: url('../imgs/white3.png') repeat;
+}
+
+div.img
+{
+    float: left;
+
+    width: 200px;
+    margin: 5px;
+    padding-bottom: 25px;
+
+    transition: .2s;
+
+    border: 1px solid #ccc;
+    border-color: #5e564f;
+    background-color: rgba(175, 158, 181, .9);
+}
+
+div.img:hover
+{
+    transition: .2s;
+
+    border: 1px solid black;
+    background: none;
+    background-color: rgba(134, 100, 56, .76);
+}
+
+div.img img
+{
+    width: 100%;
+    height: auto;
+
+    background-color: transparent;
+}
+
+div.desc
+{
+    margin-top: 5px;
+    padding: 15px;
+
+    text-align: center;
+
+    color: black;
+    border-top: solid 1px black;
+    border-bottom: solid 1px black;
+    background: url('../imgs/orangeTile2.png') repeat;
+    text-shadow: 1px 1px 1px white;
+}
+
+
+.shopping
+{
+    font-size: 7vh;
+
+    display: inline;
+
+    margin-top: 4vh;
+}

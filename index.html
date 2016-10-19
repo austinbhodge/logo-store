@@ -1,0 +1,150 @@
+<html lang="en" ng-app="app" >
+   <head>
+
+      <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/angular_material/1.0.0/angular-material.min.css">
+      <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+      <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-animate.min.js"></script>
+      <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-aria.min.js"></script>
+      <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-messages.min.js"></script>
+      <script src="http://ajax.googleapis.com/ajax/libs/angular_material/1.0.0/angular-material.min.js"></script>
+      <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+      <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+      <script src="js/main.js"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="css/stylesheet.css">
+    <link rel="stylesheet" href="css/animate.css">
+  </head>
+
+  <body ng-controller="projectCtrl" <layout="column">
+
+    <div id="sideNavContainer" ng-cloak>
+
+        <md-sidenav md-component-id="left" class="md-sidenav-left">
+        <h3 style="margin-left:30px;">Settings<span style="margin-left:8px;" class="fa fa-wrench"></span></h3>
+
+            <label class="sideLabel" for="dark-mode">Dark UI</label><md-switch style="padding-left:15px; margin-left:15px;" ng-model="darkMode" aria-label="darkMode" ng-change="darkMode()">
+
+            </md-switch>
+            <label class="sideLabel" for="size-slider">logo size</label>
+            <md-slider flex min="125" max="300" aria-controls="images" ng-model="sizeSlider" aria-label="images" id="size-slider" class="size-slider"></md-slider>
+        </md-sidenav>
+      </div>
+    <section>
+
+
+    <md-content>
+    <div class="container-fluid">
+
+      <div class="row top-row animated fadeIn">
+        <div class="col-lg-1 col-lg-offset-1 col-md-1 col-sm-1 col-xs-1">
+          <md-button class="md-fab pull-left" style="background-color:rgb(255, 127, 0); opacity:0.5;transition: 0.5s;" ng-click="openSettings()"><i class="fa fa-cogs"></i>
+            <md-tooltip md-visible="demo.showTooltip" style="" md-direction="right">
+              settings
+            </md-tooltip>
+          </md-button>
+
+        </div>
+        <div class="col-lg-1 col-lg-offset-4 col-md-1 col-md-offset-1 col-sm-2 col-xs-3">
+          <div class="form-group">
+            <input type="email" class="form-control md-block" id="login" placeholder="email">
+          </div>
+        </div>
+          <div class="col-lg-1 col-md-1 col-sm-2 col-xs-3">
+          <div class="form-group">
+            <input type="password" class="form-control md-block" id="password" placeholder="password">
+          </div>
+        </div>
+
+      <div class="col-lg-2 col-md-3  col-sm-4 ">
+
+        <md-button class="md-fab" style="background-color:rgb(97, 42, 187); opacity:0.5;transition: 0.5s;" aria-label="login" onclick="toggleLogin()">
+          <md-tooltip md-visible="demo.showTooltip" style="" md-direction="bottom">
+        Login here
+      </md-tooltip>
+          <i class="fa fa-sign-in" style="font-size:1.5em;"></i>
+      </md-button>
+      <md-button class="md-fab" style="background-color:rgb(50, 36, 71); opacity:0.5;transition: 0.5s;" aria-label="register">
+        <md-tooltip md-visible="demo.showTooltip" style="" md-direction="bottom">
+          Register here
+        </md-tooltip>
+        <i class="fa fa-user" style="font-size:1.5em;"></i>
+    </md-button>
+        <div class="shopping-card pull-left animated bounceIn">
+          <span class="fa fa-shopping-cart shopping animated pulse"></span><p ng-model="cartNum" class="cartInt">{{cartNum}}</p>
+          <p ng-model="bill" class="bill">
+            ${{bill}}
+          </p>
+          </div>
+
+        </div>
+      </div>
+
+        <div class="row">
+        <div class="col-lg-2 col-lg-offset-2 col-md-10 col-md-offset-1 col-sm-12 col-xs-12">
+          <div class="sideBar">
+            <md-button class="md-fab pull-left" style=" background-color:rgb(82, 199, 136);transition: 0.5s; border:solid 2px rgb(0, 0, 0);" aria-label="register">
+                <md-tooltip md-visible="demo.showTooltip" md-direction="top">
+                  Logo Store
+                </md-tooltip>
+              <i class="fa fa-lightbulb-o" style="font-size:1.5em; color:rgb(0, 0, 0); "></i>
+            </md-button>
+            <md-button class="md-fab pull-left" style=" opacity:0.5; background-color:rgb(82, 132, 199);transition: 0.5s; border:solid 2px rgb(0, 0, 0);" aria-label="register">
+                <md-tooltip md-visible="demo.showTooltip" md-direction="top">
+                  Music Store
+                </md-tooltip>
+              <i class="fa fa-music" style="font-size:1.5em; color:rgb(0, 0, 0); "></i>
+            </md-button>
+            <md-button class="md-fab pull-left" style=" opacity:0.5;  background-color:rgb(205, 64, 64);transition: 0.5s; border:solid 2px rgb(0, 0, 0);" aria-label="register">
+                <md-tooltip md-visible="demo.showTooltip" md-direction="top">
+                  Service Store
+                </md-tooltip>
+              <i class="fa fa-gift" style="font-size:1.5em; color:rgb(0, 0, 0); "></i>
+            </md-button>
+            <md-button class="md-fab pull-left" style=" opacity:0.5; background-color:rgb(161, 70, 176);transition: 0.5s; border:solid 2px rgb(0, 0, 0);" aria-label="register">
+                <md-tooltip md-visible="demo.showTooltip" md-direction="top">
+                  Web Store
+                </md-tooltip>
+              <i class="fa fa-desktop" style="font-size:1.5em; color:rgb(0, 0, 0); "></i>
+            </md-button>
+          </div>
+
+            <div class="form-group animated fadeInLeft" style="padding-top:12px;">
+              <input type="text" class="form-control" id="search" ng-model="searchString" placeholder="search">
+            </div>
+          </div>
+            <div class="col-lg-7 col-lg-offset-1">
+              <div ng-repeat="logo in cartLogos" style="display:inline-block; margin-right:-50px" >
+                  <div class="cart-logo animated zoomInUp">
+
+                    <img  class='smImg' ng-src="imgs/{{logo.src}}">
+                  </div>
+                    <md-button class="md-fab cart-logo-x animated zoomInUp" style="background-color:transparent;margin-right:0px; margin-left:0px; color:transparent; box-shadow:none;" ng-click="cartRemove(logo)"><i class="fa fa-times-circle" style="display:inline; font-size:2em; color:rgb(143, 45, 45); text-align:center"></i></md-button>
+                </div>
+            </div>
+        </div>
+        <md-content>
+        <div class="row" style="padding-top:-6px;">
+        <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 col-sm-12 col-xs-12">
+          <md-content flex="90" layout-align="center" style="background:url('imgs/grey.png') repeat; background-color:rgba(135, 70, 255, 0.2); border:solid 1px rgb(0, 0, 0); width:85vw; padding:8px;">
+          <div class="product-row">
+          <div ng-repeat = "logo in logos | searchFor:searchString">
+            <div flex class="img animated zoomIn" id="images" ng-attr-style="width:{{sizeSlider}};">
+              <img ng-src="imgs/{{logo.src}}">
+              <div class="desc"><b>{{logo.title}}</b><br>{{logo.price}}<br>
+                <md-button class="md-raised md-primary" style="background-color:rgb(88, 41, 244)" aria-label="{{logo.title}}" ng-click="addCart(logo.title, logo.price, logo)"><i class="fa fa-plus-circle"></i></md-button>
+              </div>
+            </div>
+          </div>
+        </div>
+        </md-content>
+        </div>
+    </div>
+  </md-content>
+  </div>
+</md-content>
+
+</section>
+</body>
+</html>
